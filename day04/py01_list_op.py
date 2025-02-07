@@ -45,6 +45,20 @@ print(arr)
 ## 리스트 합칠때
 print(arr.extend(arr2))
 
+# append()
+x = ['W', 'Y', 'Z']
+y = ['A', 'C', 'E']
+
+x.append(y)
+print(x)
+
+#extend()
+x = ['W', 'Y', 'Z']
+y = ['A', 'C', 'E']
+
+x.extend(y)
+print(x)
+
 ## 리스트 정렬(쇼핑몰 낮은가격순, 높은가격순, 최신일자부터...)
 arr = [6,7,1,3,9,0,2,8]
 print(arr)
