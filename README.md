@@ -144,10 +144,29 @@ IoT 개발자 기초 프로그래밍 언어 리포지토리
             - 화면편집 : 검색이나 출력시 데이터 수 표시
  
             https://github.com/user-attachments/assets/2f23af46-2f23-4983-8119-b7ec102041c2
-        - 챗GPT 윈도우앱(tkinter) 만들기
 
     - 주피터 노트북 학습
-    - PyQt 학습
-    
-    - 토이프로젝트
-        - 윈도우앱(PyQt)
+        - 연구를 목적으로하는 리포트작성에 특화된 기술(파이썬 사용)
+        - 주피터 프로젝트에서 나온 결과물
+        - Ctrl + Shift + P(명령 팔레트)에서 시작
+            - Create : New Jupyter Notebook 클릭
+            - 무조건 저장 먼저(.ipynb)
+
+    - GUI 학습
+        - GUI(Graphic User Interface) - 그래픽 사용자 인터페이스
+        - CLI(Console Line Interface) - GUI 이전의 사용자 인터페이스. 사용이 불편. 사용자가 명령어를 거의 다 외워서 사용
+        
+    - 파이썬 GUI 라이브러리
+        1. PyQt, PySide : 파이썬 최고의 GUI 라이브러리. Qt라는 C/C++ 사용할 GUI라이브러리를 파이썬용으로 변경
+            - 화려한 UI를 구성
+            - 코딩 다양성
+            - 조금 어렵다(파이썬 코드와 분리가능)
+            - Qt는 라이선스 구매필수, 프리웨어로 변경한게 PySide
+        2. tkinter : 파이썬에 내장된 GUI 라이브러리
+            - 아주 단순. 학습이 쉬움
+            - 파이썬 기본 내장
+            - 안이쁘다
+        3. Kivy : 가장 최근에 나온 GUI 라이브러리
+            - 안드로이드, iOS 모바일 앱 UI 사용가능
+            - 모바일특화로 멀티플랫폼 지원
+            - 가장 어렵다
