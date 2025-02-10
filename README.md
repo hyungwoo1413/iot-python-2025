@@ -186,8 +186,7 @@ IoT 개발자 기초 프로그래밍 언어 리포지토리
         # 위젯.pack() 필수!
         root.mainloop()
         ```
-
-<!-- 주석 -->
-<!-- html에서 사용하는 <img> 태그로 캡처한 이미지를 추가 -->
-<!-- ![py001](./image/py001.png) -->
-<img src="./image/py001.png" width="400">
+        <!-- 주석 -->
+        <!-- html에서 사용하는 <img> 태그로 캡처한 이미지를 추가 -->
+        <!-- ![py001](./image/py001.png) -->
+        <img src="./image/py001.png" width="400">
