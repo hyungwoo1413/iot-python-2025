@@ -198,6 +198,8 @@ IoT 개발자 기초 프로그래밍 언어 리포지토리
      - 실습
         - 제미나이 챗앱 -> **클래스형태**로 변경
 
+https://github.com/user-attachments/assets/520ab5a8-9dd9-4828-98c5-363881b13290
+
 - 파이썬 응용
      - 실행파일 만들기
         - `pyinstaller` 모듈 설치
