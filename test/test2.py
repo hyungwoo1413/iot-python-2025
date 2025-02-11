@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import random
 
 rows = 4
@@ -13,11 +14,13 @@ def buttonClick(i, j):
         arr[empty_button[0]][empty_button[1]], arr[i][j] = arr[i][j], arr[empty_button[0]][empty_button[1]]
         empty_button = (i, j)
         update_button()
+        check_success()
 
 def update_button():
     for i in range(rows):
         for j in range(cols):
-            button = Button(root, text=arr[i][j] if arr[i][j] is not None else "", width=20, height=9, command=lambda i=i, j=j: buttonClick(i, j))
+            button = Button(root, text=arr[i][j] if arr[i][j] is not None else "", 
+                            width=5, height=3, font=("Arial",40), command=lambda i=i, j=j: buttonClick(i, j))
             button.grid(row=i, column=j)
 
 def shuffle_puzzle():
@@ -35,8 +38,16 @@ def shuffle_puzzle():
                 empty_button = (i, j)
             k += 1
 
+def check_success():
+    correct_arr = [i for i in range(1, rows * cols)] + [None]
+    flat_arr = [arr[i][j] for i in range(rows) for j in range(cols)]
+    
+    if flat_arr == correct_arr:
+        messagebox.showinfo("성공", "성공")
+
 
 root = Tk()
+root.title('슬라이드 퍼즐')
 shuffle_puzzle()
 update_button()
 root.mainloop()
