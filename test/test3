@@ -28,7 +28,7 @@ class Puzzle(Tk):
         for i in range(self.rows):
             for j in range(self.cols):
                 button_text = self.arr[i][j] if self.arr[i][j] is not None else ''
-                button = Button(self, text=button_text, width=5, height=3, font=('Arial', 40),
+                button = Button(self, text=button_text, width=5, height=2, font=('Arial', 40),
                                command=lambda i=i, j=j: self.button_click(i, j))
                 button.grid(row=i, column=j)
                 self.buttons[i][j] = button  # 버튼을 리스트에 저장
