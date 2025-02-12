@@ -6,6 +6,7 @@ import sys
 
 import random
 import math
+import time
 
 SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 800
@@ -15,7 +16,7 @@ class Block:
         self.col = col
         self.rect = rect
         self.speed = speed
-        self.dir = random.randint(-45, 45) + 270
+        self.dir = random.randint(-45, 45) + 90  # 270이면 공이 아래로 -45~45편차로 시작
 
     def move(self): # 볼 무브
         # 볼이 움직이는 x축 값을 계속 계산하려면 x는 dir 값을 라디언으로 변환 후 코사인처리
@@ -117,11 +118,22 @@ def main():
             if len(BLOCK) == 0: # 볼로 블럭을 다 없앴음
                 Surface.blit(M_CLEAR, ((SCREEN_WIDTH / 2) - (240 / 2), 
                                         (SCREEN_HEIGHT / 2) - (50 / 2)))
-
-            if BALL.rect.centery > 800:
+                is_game_start = False
+                for y, color in enumerate(colors, start=0): # y값은 0 ~ 6
+                    for x in range(0, 9):
+                        BLOCK.append(Block(color, Rect(x*80 + 150, y*40 + 40, 60, 20)))
+                BALL = Block((200,200,0), Rect(375,650,20,20), 10)
+                score = 0
+                
+            if BALL.rect.centery > 800: # 볼이 아래로 떨어짐
                 Surface.blit(M_FAIL, ((SCREEN_WIDTH / 2) - (240 / 2), 
                                         (SCREEN_HEIGHT / 2) - (50 / 2)))
-                # is_game_start = False # 게임 종료 후 재시작은 나중에 다시
+                is_game_start = False
+                for y, color in enumerate(colors, start=0): # y값은 0 ~ 6
+                    for x in range(0, 9):
+                        BLOCK.append(Block(color, Rect(x*80 + 150, y*40 + 40, 60, 20)))
+                BALL = Block((200,200,0), Rect(375,650,20,20), 10)
+                score = 0
 
             BALL.draw_E()
             PADDLE.draw_R()
