@@ -18,7 +18,7 @@ class Puzzle(Tk):
     def button_click(self, i, j):
         if self.arr[i][j] is None: # 빈칸을 클릭하면 성공 메시지
             if self.check_success():
-                messagebox.showinfo('성공', '성공')
+                messagebox.showinfo('성공', '성공') 
         elif (abs(i - self.empty_button[0]) == 1 and j == self.empty_button[1]) or (abs(j - self.empty_button[1]) == 1 and i == self.empty_button[0]):
             self.arr[self.empty_button[0]][self.empty_button[1]], self.arr[i][j] = self.arr[i][j], self.arr[self.empty_button[0]][self.empty_button[1]]
             self.empty_button = (i, j)

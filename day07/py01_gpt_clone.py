@@ -53,7 +53,7 @@ root.title('제미나이 챗봇')
 root.geometry('730x450')
 
 # 12. 아이콘 변경
-# root.iconbitmap('chatbot.ico')
+root.iconbitmap('./image/chatbot.ico')
 
 # 7. 전체에서 사용할 폰트 지정 -> 나눔고딕
 myFont = Font(family='NanumGothic', size=10)

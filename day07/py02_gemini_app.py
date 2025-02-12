@@ -14,7 +14,7 @@ class window(Tk):
         super().__init__() # 부모객체도 같이 초기화
         self.title('제미나이 챗봇 v2.0')
         self.geometry('730x450')
-        # self.iconbitmap('chatbot.ico') # pyinstaller로 설치할땐 해당폴더에 복사하고 경로 변경
+        self.iconbitmap('./image/chatbot.ico') # pyinstaller로 설치할땐 해당폴더에 복사하고 경로 변경
         # 클래스 작업할땐 self ... 유심히
         self.protocol('WM_DELETE_WINDOW', self.onClosing)
 
